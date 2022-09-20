@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Online Booking</title>
+</head>
+<div class="online booking">
+    <body>
+        <form method="post">
+            {% csrf_token %}
+    
+            <h1>Online Booking Form</h1>
+            <br>
+            <p>Customer Name: <input type="text" name="customer name" value="{{x1}}"></p>
+            <br>
+            <p>Customer Address: <input type="text" name="Customer Address" value="{{x2}}"></p>
+            <br>
+            <p>Customer Pancard: <input type="text" name="Customer Pancard" value="{{x3}}"></p>
+            <br>
+            <p>Customer Aadhar No: <input type="number" name="Customer Aadhaar No" value="{{x4}}"></p>
+            <br>
+            <p>Customer Phone No: <input type="number" name="Customer Phone No" value="{{x5}}"></p>
+            <br>
+            <p>
+                Select Room : *
+                <select name="room_select" id="room_select" required>
+                    <option value="">
+                        ---Select your room---
+                    </option>
+                    <option value="{{x6}}" name="Deluxe Room">
+                        Deluxe Room
+                    </option>
+                    <option value="{{x7}}" name="Luxury Room"> Luxury Room </option>
+                    <option value="{{x8}}" name="Premier Room"> Premier Room </option>
+                    <option value="{{x9}}" name="Premier Plus Room"> Premier Plus Room </option>
+                    
+                    <option value="{{x10}}"name="The Oberoi Suites"> The Oberoi Suites </option>
+                    <option value="{{x11}}" name="Deluxe Suites"> Deluxe Suites </option>
+                    <option value="{{x12}}" name="Luxury Suites"> Luxury Suites </option>
+                    <option value="{{x13}}" name="Kohinoor Suites"> Kohinoor Suites </option>
+                
+                </select>
+            </p>
+            <br>
+            <br>
+            <p>
+                Room Type: *
+                <select name="room_type" id="room_type" required>
+                    <option value="">
+                        ---Select your Room Type---
+                    </option>
+                    <option value="{{x14}}" name="AC Room">
+                        A.C. Room
+                    </option>
+                    <option value="{{x15}}" name="Non AC Room"> Non A.C. Room </option>
+                    
+                </select>
+            </p>
+            
+            <br>
+            <p>
+                Date : 
+                <input type="date" name="" id="">
+            </p>
+            <br>
+            <p><input type="submit" value="Book the Room"></p>
+    
+        </form>
+        
+    </body>
+    </div>
+</html>
